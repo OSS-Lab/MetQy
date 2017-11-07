@@ -14,8 +14,9 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 5.0.1
 Suggests: testthat
+NeedsCompilation: no
+Packaged: 2017-10-31 14:56:45 UTC; smrnab
 Author: Andrea Martinez-Vernon [aut, cre],
   Soyer Orkun [ctb],
   Frederick Farrell [ctb]
 Maintainer: Andrea Martinez-Vernon <asmvernon@gmail.com>
-Built: R 3.3.1; ; 2017-10-31 14:57:33 UTC; unix
