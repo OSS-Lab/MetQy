@@ -4,31 +4,31 @@ MetQy is a R package to ease interfacing with the Kyoto Encyclopedia of Genes an
 
 ## Using MetQy
 ### CITE US
-Please cite Martinez-Vernon et al. MetQy – an R package to query metabolicfunctions of genes and genomes. _In preparation_.
+Please cite Martinez-Vernon et al. MetQy – an R package to query metabolic functions of genes and genomes. _In preparation_.
 
-### Commerical use
-MetQy is a free software for academic purposes. If interested in commerical use, please read the LICENCE and contact [Warwick Ventures](mailto:ventures@warwick.ac.uk)
+### Commercial use
+MetQy is a free software for academic purposes. If interested in commercial  use, please read the LICENCE and contact [Warwick Ventures](mailto:ventures@warwick.ac.uk)
 
 ### Getting started
 #### Installation
 There are two ways of installing the package:
 
-1. Download 'MetQy_1.0.1.tar.gz' or 'MetQy_1.0.1.tgz' and run the follwing command withing the R environment:
+1. Download 'MetQy_1.0.1.tar.gz' or 'MetQy_1.0.1.tgz' and run the following command within the R environment:
     ```
-    install.packages('path_to_directory/MetQy_1.0.1.tgz',repos=NULL)  # QUICKER
+    install.packages('<path_to_directory>/MetQy_1.0.1.tgz',repos=NULL)  # QUICKER
     library(MetQy)
     ```
     _OR_
     ```
-    install.packages('path_to_directory/MetQy_1.0.1.tar.gz',repos=NULL)
+    install.packages('<path_to_directory>/MetQy_1.0.1.tar.gz',repos=NULL)
     library(MetQy)
     ```
-2. Run the following command within the R enviornment. Requires package `devtools`
+2. Run the following command within the R environment. Requires package `devtools`
     ```
     devtools::install_github('OSS-Lab/MetQy',subdir = 'MetQy_1.0.1')
     ```
 
-Note that MetQy requires the follwing pacakes, but these should be installed along with tha package (if necessary):
+Note that MetQy requires the following packages, but these should be installed along with the package (if necessary):
 
     dplyr, ggplot2, gsubfn, reshape
 
@@ -40,7 +40,7 @@ The function `query_genomes_to_modules` takes as input a genome of set of genes 
 * KEGG genome identifier (T number or 3-4 letter code, e.g. 'T0001' or 'eco')
 * Organism name (e.g. 'Escherichia coli')
 * a list of KEGG ortholog IDs (e.g. 'K00001')
-* a list of Enzyme Commison (EC) numbers (e.g. '1.1.1.1')
+* a list of Enzyme Commisson (EC) numbers (e.g. '1.1.1.1')
 
 The last two options allow the user to provide their own [meta]genome as determine by the genes or enzymes provided.
 
@@ -70,7 +70,7 @@ Run the genomes to modules query as follows:
 
     modules_table = query_output$MATRIX
     
-The output of this is a data frame where the rows are organism IDs, the columns are KEGG modules, and the entries are the module completeness fraction (proportion of complete blocks) for each module. In the examples avobe, there would only be one column as there was only one modules specified.
+The output of this is a data frame where the rows are organism IDs, the columns are KEGG modules, and the entries are the module completeness fraction (proportion of complete blocks) for each module. In the examples above, there would only be one column as there was only one modules specified.
 
 #### Other functionality
 
