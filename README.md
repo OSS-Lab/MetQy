@@ -9,8 +9,7 @@ Please cite Martinez-Vernon et al. MetQy – an R package to query metabolic fun
 ### Commercial use
 MetQy is a free software for academic purposes. If interested in commercial  use, please read the LICENCE and contact [Warwick Ventures](mailto:ventures@warwick.ac.uk)
 
-### Getting started
-#### Installation
+## Installation
 There are two ways of installing the package:
 
 1. Download 'MetQy_1.0.1.tar.gz' or 'MetQy_1.0.1.tgz' and run the following command within the R environment:
@@ -33,7 +32,7 @@ Note that MetQy requires the following packages, but these should be installed a
     dplyr, ggplot2, gsubfn, reshape
 
     
-#### Example of use
+## Example of use
 
 The function `query_genomes_to_modules` takes as input a genome of set of genes making up a genome and returns the module completeness fraction (_mcf_) (proportion of module 'blocks' contained in the genome(s)) of specified KEGG module for each genome (see https://github.com/OSS-Lab/MetQy/wiki/KEGG-databases-description). These genomes can be expressed as either:
 
@@ -72,7 +71,7 @@ Run the genomes to modules query as follows:
     
 The output of this is a data frame where the rows are organism IDs, the columns are KEGG modules, and the entries are the module completeness fraction (proportion of complete blocks) for each module. In the examples above, there would only be one column as there was only one modules specified.
 
-#### Other functionality
+## Other functionality
 
 MetQy can also perform a variety of other queries:
 
