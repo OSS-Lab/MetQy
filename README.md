@@ -12,7 +12,13 @@ MetQy is a free software for academic purposes. If interested in commercial  use
 ## Installation
 There are two ways of installing the package:
 
-1. Download 'MetQy_1.0.1.tar.gz' or 'MetQy_1.0.1.tgz' and run the following command within the R environment:
+1. Run the following command within the R environment. Requires package `devtools`
+    ```
+    # install.packages("devtools") # Uncomment if not previously installed 
+    devtools::install_github('OSS-Lab/MetQy',subdir = 'MetQy_1.0.1') # 
+    ```
+    
+2. Download 'MetQy_1.0.1.tar.gz' or 'MetQy_1.0.1.tgz' and run the following command within the R environment:
     ```
     install.packages('<path_to_directory>/MetQy_1.0.1.tgz',repos=NULL)  # QUICKER
     library(MetQy)
@@ -22,14 +28,10 @@ There are two ways of installing the package:
     install.packages('<path_to_directory>/MetQy_1.0.1.tar.gz',repos=NULL)
     library(MetQy)
     ```
-2. Run the following command within the R environment. Requires package `devtools`
-    ```
-    devtools::install_github('OSS-Lab/MetQy',subdir = 'MetQy_1.0.1')
-    ```
 
 Note that MetQy requires the following packages, but these should be installed along with the package (if necessary):
 
-    dplyr, ggplot2, gsubfn, reshape
+    dplyr, ggplot2, gsubfn, reshape2
 
     
 ## Example of use
