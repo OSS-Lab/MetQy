@@ -15,25 +15,32 @@ There are two ways of installing the package:
 1. Run the following command within the R environment. Requires package `devtools`
     ```
     # install.packages("devtools") # Uncomment if not previously installed 
-    devtools::install_github('OSS-Lab/MetQy',subdir = 'MetQy_1.0.1') # 
+    
+    # Install MetQy
+    devtools::install_github('OSS-Lab/MetQy',subdir = 'MetQy_1.0.1',dependencies = TRUE)
     ```
     
-2. Download 'MetQy_1.0.1.tar.gz' or 'MetQy_1.0.1.tgz' and run the following command within the R environment:
+2. Download 'MetQy_1.0.1.tar.gz' and run the following commands within the R environment:
     ```
-    install.packages('<path_to_directory>/MetQy_1.0.1.tgz',repos=NULL)  # QUICKER
-    library(MetQy)
-    ```
-    _OR_
-    ```
+    # Install dependent packages - remove any that is already installed. Installing will replace local library.
+    install.packages(c("dplyr","ggplot2","gsubfn","reshape2","xtable"))
+    
+    # Install MetQy
     install.packages('<path_to_directory>/MetQy_1.0.1.tar.gz',repos=NULL)
     library(MetQy)
     ```
 
-Note that MetQy requires the following packages, but these should be installed along with the package (if necessary):
-
-    dplyr, ggplot2, gsubfn, reshape2
-
+3. Download 'MetQy_1.0.1.tgz' and run the following commands within the R environment:
+    ```
+    # Install dependent packages - remove any that is already installed. Installing will replace local library.
+    install.packages(c("dplyr","ggplot2","gsubfn","reshape2","xtable"))
     
+    # Install MetQy
+    install.packages('<path_to_directory>/MetQy_1.0.1.tgz',repos=NULL)  # QUICKER
+    library(MetQy)
+    ```
+    Note that this option might only be compatible with OS X. 
+ 
 ## Example of use
 
 The function `query_genomes_to_modules` takes as input a genome of set of genes making up a genome and returns the module completeness fraction (_mcf_) (proportion of module 'blocks' contained in the genome(s)) of specified KEGG module for each genome (see https://github.com/OSS-Lab/MetQy/wiki/KEGG-databases-description). These genomes can be expressed as either:
