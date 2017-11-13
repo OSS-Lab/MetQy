@@ -16,13 +16,13 @@ There are two ways of installing the package:
     ```
     # install.packages("devtools") # Uncomment if not previously installed 
     
-    # Install MetQy
-    devtools::install_github('OSS-Lab/MetQy',subdir = 'MetQy_1.0.1',dependencies = TRUE)
+    # Install MetQy - required dependent packages are installed automatically
+    devtools::install_github('OSS-Lab/MetQy',subdir = 'MetQy_1.0.1',dependencies = TRUE) # 
     ```
     
 2. Download 'MetQy_1.0.1.tar.gz' and run the following commands within the R environment:
     ```
-    # Install dependent packages - remove any that is already installed. Installing will replace local library.
+    # Manually install dependent packages - remove any that is already installed. Installing will replace local library.
     install.packages(c("dplyr","ggplot2","gsubfn","reshape2","xtable"))
     
     # Install MetQy
@@ -32,14 +32,15 @@ There are two ways of installing the package:
 
 3. Download 'MetQy_1.0.1.tgz' and run the following commands within the R environment:
     ```
-    # Install dependent packages - remove any that is already installed. Installing will replace local library.
+    ## Note that this option might only be compatible with OS X. 
+    
+    # Manually install dependent packages - remove any that is already installed. Installing will replace local library.
     install.packages(c("dplyr","ggplot2","gsubfn","reshape2","xtable"))
     
     # Install MetQy
     install.packages('<path_to_directory>/MetQy_1.0.1.tgz',repos=NULL)  # QUICKER
     library(MetQy)
     ```
-    Note that this option might only be compatible with OS X. 
  
 ## Example of use
 
