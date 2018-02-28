@@ -1,6 +1,6 @@
 # MetQy - metabolic query 
 
-MetQy is a R package to ease interfacing with the Kyoto Encyclopedia of Genes and Genomes (KEGG) database to query metabolic functions of genes and genomes. Given a list of genes or an organism, it will return the set of functional modules possessed by an organism and their completeness.
+MetQy is a R package to ease interfacing with the Kyoto Encyclopedia of Genes and Genomes (KEGG) database to query metabolic functions of genes and genomes. As discussed in detail in the associated paper (see above), MetQy can be used to convert key parts of the data contained in the KEGG database into R data structures, and perform analyses on this data. Below we provide a simple example of how MetQy can be used to analyze a set of given genomes for the presence of a set of given metabolic capabilities (i.e. modules).
 
 ## Using MetQy
 ### CITE US
@@ -47,7 +47,7 @@ There are two ways of installing the package:
     library(MetQy)
     ```
  
-## Example of use
+## Brief example
 
 The function `query_genomes_to_modules` takes as input a genome of set of genes making up a genome and returns the module completeness fraction (_mcf_) (proportion of module 'blocks' contained in the genome(s)) of specified KEGG module for each genome (see https://github.com/OSS-Lab/MetQy/wiki/KEGG-databases-description). These genomes can be expressed as either:
 
