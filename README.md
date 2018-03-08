@@ -67,4 +67,4 @@ Detailed information on MetQy functions, along with usage examples and a sample 
 [fun_parse]: https://github.com/OSS-Lab/MetQy/wiki/MetQy-functions-and-usage-examples-%E2%80%93-Parsing-functions
 [fun_vis]: https://github.com/OSS-Lab/MetQy/wiki/MetQy-functions-and-usage-examples-%E2%80%93-Visualization-functions
 [fun_analysis]: https://github.com/OSS-Lab/MetQy/wiki/MetQy-functions-and-usage-examples-%E2%80%93-Analysis-functions
-[bio_eg]: https://github.com/OSS-Lab/MetQy/wiki/Example-use-of-MetQy-for–biological-analysis
+[bio_eg]: https://github.com/OSS-Lab/MetQy/wiki/Example-use-of-MetQy-for%E2%80%93biological-analysis
