@@ -6,7 +6,7 @@ MetQy is a R package to ease interfacing with the Kyoto Encyclopedia of Genes an
 #### CITE US
 Please cite:
 ```
-    Andrea Martinez-Vernon, Fred Farrell, Orkun Soyer. MetQy: an R package to query metabolic functions of genes and genomes. 
+    Andrea Martinez-Vernon, Fred Farrell, Orkun Soyer. MetQy - an R package to query metabolic functions of genes and genomes. 
         bioRxiv - https://www.biorxiv.org/content/early/2017/11/16/215525
 ```
 https://www.biorxiv.org/content/early/2017/11/16/215525
