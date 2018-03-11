@@ -1,0 +1,76 @@
+ENTRY       T00001            Complete  Genome
+NAME        hin, HAEIN, 71421
+DEFINITION  Haemophilus influenzae Rd KW20 (serotype d)
+ANNOTATION  manual
+TAXONOMY    TAX:71421
+  LINEAGE   Bacteria; Proteobacteria; Gammaproteobacteria; Pasteurellales; Pasteurellaceae; Haemophilus
+DATA_SOURCE RefSeq (Assembly:GCF_000027305.1)
+ORIGINAL_DB JCVI-CMR
+KEYWORDS    Human pathogen
+DISEASE     H00304  Haemophilus influenzae infection
+COMMENT     Avirulent laboratory strain.
+CHROMOSOME  Circular
+  SEQUENCE  RS:NC_000907 (GB:L42023)
+  LENGTH    1830138
+STATISTICS  Number of nucleotides:       1830138
+            Number of protein genes:        1610
+            Number of RNA genes:              81
+REFERENCE   PMID:7542800
+  AUTHORS   Fleischmann RD et al.
+  TITLE     Whole-genome random sequencing and assembly of Haemophilus influenzae Rd.
+  JOURNAL   Science 269:496-512 (1995)
+            DOI:10.1126/science.7542800
+///
+ENTRY       T00002            Complete  Genome
+NAME        mge, MYCGE, 243273
+DEFINITION  Mycoplasma genitalium G37
+ANNOTATION  manual
+TAXONOMY    TAX:243273
+  LINEAGE   Bacteria; Tenericutes; Mollicutes; Mycoplasmataceae; Mycoplasma
+DATA_SOURCE GenBank (Assembly:GCA_000027325.1)
+ORIGINAL_DB JCVI
+KEYWORDS    Human pathogen
+DISEASE     H00388  Non-chlamydial non-gonococcal urethritis
+COMMENT     Isolated from a male with non-gonococcal urethritis.
+CHROMOSOME  Circular
+  SEQUENCE  GB:L43967
+  LENGTH    580076
+STATISTICS  Number of nucleotides:        580076
+            Number of protein genes:         476
+            Number of RNA genes:              43
+REFERENCE   PMID:7569993
+  AUTHORS   Fraser CM et al.
+  TITLE     The minimal gene complement of Mycoplasma genitalium.
+  JOURNAL   Science 270:397-403 (1995)
+            DOI:10.1126/science.270.5235.397
+///
+ENTRY       T00003            Complete  Genome
+NAME        mja, METJA, 243232
+DEFINITION  Methanocaldococcus jannaschii DSM 2661
+ANNOTATION  manual
+TAXONOMY    TAX:243232
+  LINEAGE   Archaea; Euryarchaeota; Methanococci; Methanococcales; Methanocaldococcaceae; Methanocaldococcus
+DATA_SOURCE GenBank (Assembly:GCA_000091665.1)
+ORIGINAL_DB JCVI
+KEYWORDS    Autotrophic methanogen
+COMMENT     Autotrophic and strict anaerobe.
+            Produces methane. 
+            Grows at pressures of up to more than 200 atm and at an optimum temperature of near 85 deg C.
+            Originally isolated from a sediment sample collected from the sea floor surface at the base of a 2600-m-deep "white smoker" chimney on the East Pacific Rise.
+CHROMOSOME  Circular
+  SEQUENCE  GB:L77117
+  LENGTH    1664970
+PLASMID     ECL; Circular
+  SEQUENCE  GB:L77118
+  LENGTH    58407
+PLASMID     ECS; Circular
+  SEQUENCE  GB:L77119
+  LENGTH    16550
+STATISTICS  Number of nucleotides:       1739927
+            Number of protein genes:        1770
+            Number of RNA genes:              43
+REFERENCE   PMID:8688087
+  AUTHORS   Bult CJ et al.
+  TITLE     Complete genome sequence of the methanogenic archaeon, Methanococcus jannaschii.
+  JOURNAL   Science 273:1058-73 (1996)
+            DOI:10.1126/science.273.5278.1058
