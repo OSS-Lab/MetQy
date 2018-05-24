@@ -25,7 +25,7 @@
 #'
 #' @param verbose       - logical. Should progress be printed to the screen? Default (\code{TRUE}).
 #'
-#'  @param ...       - other arguments for \code{parseKEGG_file()}.
+#' @param ...       - further arguments for \code{parseKEGG_file()}.
 #'
 #' @return Generates genome_reference_table (.txt & .rda; saved to \code{'outDir'}) and returns
 #' a data frame with as many rows as entries and the following columns (or variables):

@@ -23,7 +23,7 @@
 #'
 #' A dataset containing an example of a vector containing Enzyme Commission (EC) numbers
 #' that can be used with the function \code{misc_geneVector_module()}
-#' or by the function \code{query_genomes_to_modules()} after formatting it into a data frame (see function description).
+#' or by the \code{query_genomes_to_modules()} function after formatting it into a data frame (see function description).
 #'
 #' When generating an EC number vector, make sure that all entries have the 4 nomenclature positions
 #' (".-" denotes an unspecified field, e.g. "1.1.1.-").
@@ -101,13 +101,13 @@
 #' # Load data
 #' data("data_example_sunburst")
 #' head(data_example_sunburst)
-#' #           CLASS_I                          CLASS_II             CLASS_III                                            NAME_SHORT
-#' # 1 Pathway module Carbohydrate and lipid metabolism Fatty acid metabolism                                        beta-Oxidation
-#' # 2 Pathway module                 Energy metabolism    Methane metabolism                         Methanogenesis, from methanol
-#' # 3 Pathway module                 Energy metabolism    Methane metabolism                          Methanogenesis, from acetate
-#' # 4 Pathway module                 Energy metabolism       Carbon fixation Reductive acetyl-CoA pathway (Wood-Ljungdahl pathway)
-#' # 5 Pathway module                 Energy metabolism   Nitrogen metabolism                       Dissimilatory nitrate reduction
-#' # 6 Pathway module                 Energy metabolism    Methane metabolism                      Methanogenesis, from methylamine
+#' #        CLASS_I    CLASS_II    CLASS_III    NAME_SHORT
+#' # 1 Pathway module Carbohydrate \& lipid metabolism Fatty acid metabolism    beta-Oxidation
+#' # 2 Pathway module    Energy metabolism    Methane metabolism    Methanogenesis, from methanol
+#' # 3 Pathway module    Energy metabolism    Methane metabolism    Methanogenesis, from acetate
+#' # 4 Pathway module    Energy metabolism    Carbon fixation    Reductive acetyl-CoA pathway
+#' # 5 Pathway module    Energy metabolism    Nitrogen metabolism    Dissimilatory nitrate reduction
+#' # 6 Pathway module    Energy metabolism    Methane metabolism    Methanogenesis, from methylamine
 #'
 #' @seealso \link{plot_sunburst}
 

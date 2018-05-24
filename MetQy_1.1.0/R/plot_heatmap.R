@@ -20,6 +20,8 @@
 #'
 #' @param Height      - optional. Height size for file. Default (18 in).
 #'
+#' @param ...  - further arguments (currently unsupported)
+#'
 #' @details
 #' If \code{data_in} is a data frame, the heatmap will be made using the first column as the row entry labels, the second column as the column entry labels
 #' and the third as the actual value to be plotted.
@@ -35,11 +37,13 @@
 #' data(data_example_moduleIDs)
 #' data(data_example_genomeIDs)
 #'
-#' # Calculate the module completion fraction (mcf) for the genomes and modules contained in the data objects above.
+#' # Calculate the module completion fraction (mcf) for the genomes
+#' #      and modules contained in the data objects above.
 #' OUT         <- query_genomes_to_modules(data_example_genomeIDs,MODULE_ID = data_example_moduleIDs)
 #'
 #' # Make a heatmap of the mcf output from query_genomes_to_modules
-#' #     Rows and columns are reordered according to the dendrogram resulting from hierarchical clustering by default.
+#' #     Rows and columns are reordered according to the dendrogram resulting from
+#' #           hierarchical clustering by default.
 #' p <- plot_heatmap(OUT$MATRIX,Filename = "plot_heatmap.png")
 #'
 #' @export
@@ -47,7 +51,7 @@
 ############################################################################################################################################
 
 plot_heatmap <- function(data_in, row_lab = "Genomes", col_lab = "Modules",ORDER_MATRIX = TRUE,legend_name = "Module\ncompleteness\nfraction\n",
-                         set_yLim = FALSE, Filename ="", Width = 24, Height = 18){
+                         set_yLim = FALSE, Filename ="", Width = 24, Height = 18,...){
 
   # MANAGE INPUT ----
   if(!is.character(row_lab)||!length(row_lab)==1){

@@ -15,6 +15,8 @@
 #' @param use_module_reference_table - optional. Provide a data frame with updated KEGG module database OR with custom-made modules.
 #'                                     Default (\code{NULL}; inbuilt data used). See Details.
 #'
+#' @param ...  - further arguments (currently unsupported)
+#'
 #' @details
 #' The \code{use_} set of argument allows users with KEGG FTP access to provide the updated data from the KEGG databases in the form of
 #' reference tables AND/OR for advanced users to provide custom-made modules (see below).
@@ -44,7 +46,7 @@
 #' @export
 #'
 
-query_modules_to_genomes <- function(MODULE_ID,threshold = 1, use_matrix_dataframe = NULL,use_module_reference_table = NULL){
+query_modules_to_genomes <- function(MODULE_ID,threshold = 1, use_matrix_dataframe = NULL,use_module_reference_table = NULL,...){
 
   #### MANAGE INPUT ----
   stopifnot(is.character(MODULE_ID),length(MODULE_ID)>0,threshold>=0,threshold<=1)

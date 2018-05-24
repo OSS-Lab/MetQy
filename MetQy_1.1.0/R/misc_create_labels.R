@@ -4,13 +4,15 @@
 #'
 #' @param N - numeric. Indicates the length of the label vector to be return.
 #'
+#' @param ...  - further arguments (currently unsupported)
+#'
 #' @return A character vector of length N with unique set of alpha-numeric labels.
 #'
 #' @export
 
 ############################################################################################################################################
 
-misc_create_labels <- function(N){
+misc_create_labels <- function(N,...){
   stopifnot(is.numeric(N))
   stopifnot(length(N)==1)
 

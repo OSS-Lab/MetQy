@@ -4,7 +4,7 @@
 #'
 #' @param KEGG_path - string pointing to the location of the KEGG database parent folder.
 #'
-#' @param ...       - other arguments, such as \code{outDir}, for \link{parseKEGG_file},
+#' @param ...       - further arguments, such as \code{outDir}, for \link{parseKEGG_file},
 #'                     \link{parseKEGG_file.list} and database-specific functions (below).
 #'
 #' @seealso \link{parseKEGG_compound}, \link{parseKEGG_enzyme},
@@ -16,7 +16,8 @@
 #' @examples
 #' KEGG_path <- "~/KEGG" # MODIFY!
 #' parseKEGG_parseKEGG_execute_all(KEGG_path)
-#' # multiple reference_table objects in workspace and .txt files written to output/ (relative to current working directory)
+#' # multiple reference_table objects in workspace and .txt files written to
+#' #    output/ (relative to current working directory)
 #'
 #' @export
 

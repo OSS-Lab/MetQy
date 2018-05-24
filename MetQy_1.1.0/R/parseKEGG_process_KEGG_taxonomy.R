@@ -13,6 +13,8 @@
 #'
 #' @param org_header             - optional. Character with header name or number indicating column index for organism name or ID. Use to name the output rownames. Default (1; first column).
 #'
+#' @param ...  - further arguments (currently unsupported)
+#'
 #' @return Data frame with 6 columns containing the taxonomic information (columns: KINGDOM, PHYLUM, CLASS, ORDER, FAMILY, GENUS).
 #' The rownames contain the organism information (name or ID) as specified with \code{org_header}.
 #' \code{UNKNOWN} label is added where no information is available.
@@ -23,14 +25,9 @@
 #'
 #' # Extract taxonomic information from genome_referene_table
 #' TAXONOMY_table <- parseKEGG_process_KEGG_taxonomy(genome_reference_table)
-#' head(TAXONOMY_table)
-#' #          KINGDOM         PHYLUM               CLASS            ORDER                FAMILY              GENUS
-#' # T00001  Bacteria Proteobacteria Gammaproteobacteria   Pasteurellales       Pasteurellaceae        Haemophilus
-#' # T00002  Bacteria    Tenericutes          Mollicutes Mycoplasmataceae            Mycoplasma            UNKNOWN
-#' # T00003   Archaea  Euryarchaeota        Methanococci  Methanococcales Methanocaldococcaceae Methanocaldococcus
-#' # T00004  Bacteria  Cyanobacteria     Synechococcales Merismopediaceae         Synechocystis            UNKNOWN
-#' # T00005 Eukaryota          Fungi             Dikarya       Ascomycota      Saccharomycotina    Saccharomycetes
-#' # T00006  Bacteria    Tenericutes          Mollicutes Mycoplasmataceae            Mycoplasma            UNKNOWN
+#' TAXONOMY_table[1,]
+#' #            KINGDOM    PHYLUM             CLASS                  ORDER             FAMILY             GENUS
+#' # T00001     Bacteria    Proteobacteria    Gammaproteobacteria    Pasteurellales    Pasteurellaceae    Haemophilus
 #'
 #' @seealso \link{parseKEGG_genome}
 #'
@@ -38,7 +35,7 @@
 
 ############################################################################################################################################
 
-parseKEGG_process_KEGG_taxonomy <- function(genome_reference_table,taxonomy_header = "TAXONOMY",org_header = 1){
+parseKEGG_process_KEGG_taxonomy <- function(genome_reference_table,taxonomy_header = "TAXONOMY",org_header = 1,...){
 
   ## MANAGE INPUT ----
   if(!is.character(org_header)||!is.numeric(org_header)||length(org_header)>1) org_header <- 1

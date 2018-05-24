@@ -14,6 +14,8 @@
 #' @param use_enzyme_reference_table - optional. Provide a data frame with updated KEGG enzyme database.
 #'                                     Default (\code{NULL}; inbuilt data used). See Details.
 #'
+#' @param ...  - further arguments (currently unsupported)
+#'
 #' @return Data frame containing the \code{genes} (rows, specified in the rownames) and
 #' the T number of the KEGG genomes (columns) with a binary indicator for presence of gene in given genome.
 #'
@@ -43,7 +45,7 @@
 #' @seealso \link{parseKEGG_genome}, \link{ko_reference_table}, \link{enzyme_reference_table}
 #' @export
 
-query_genes_to_genomes <- function(genes,use_genome_reference_table = NULL,use_ko_reference_table = NULL,use_enzyme_reference_table = NULL){
+query_genes_to_genomes <- function(genes,use_genome_reference_table = NULL,use_ko_reference_table = NULL,use_enzyme_reference_table = NULL,...){
 
   # MANAGE INPUT ----
   stopifnot(is.character(genes))

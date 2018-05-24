@@ -9,6 +9,8 @@
 #'
 #' @param verbose   - logical. Should progress be printed to the screen? Default (\code{TRUE})
 #'
+#' @param ...       - further arguments for \code{parseKEGG_file.list()}.
+#'
 #' @return Data frame establishing the relationship between K numbers and enzymes (binary).
 #'\preformatted{
 #' > ko_enzyme_map[1:3,1:3]
@@ -41,7 +43,7 @@
 
 ############################################################################################################################################
 
-parseKEGG_ko_enzyme <- function(KEGG_path, outDir = "output", verbose = T){
+parseKEGG_ko_enzyme <- function(KEGG_path, outDir = "output", verbose = T,...){
 
   ####  MANAGE INPUT ----
   # CHECKS

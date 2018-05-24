@@ -15,6 +15,8 @@
 #' @param use_enzyme_reference_table - optional. Provide a data frame with updated KEGG enzyme database.
 #'                                     Default (\code{NULL}; inbuilt data used). See Details.
 #'
+#' @param ...  - further arguments (currently unsupported)
+#'
 #' @return Data frame containing a binary indicator for \code{genes} (rows, specified by rownames) involved in modules (columns, Module IDs specified in names).
 #' A column called '\code{no_match}' is returned if one or more of the genes is not involved in any modules.
 #'
@@ -39,7 +41,7 @@
 #' @seealso \link{parseKEGG_module}
 #' @export
 
-query_genes_to_modules <- function(genes,use_module_reference_table = NULL,use_ko_reference_table = NULL,use_enzyme_reference_table = NULL){
+query_genes_to_modules <- function(genes,use_module_reference_table = NULL,use_ko_reference_table = NULL,use_enzyme_reference_table = NULL,...){
 
   # MANAGE INPUT ----
   stopifnot(is.character(genes))

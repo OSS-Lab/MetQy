@@ -4,6 +4,8 @@
 #'
 #' @param DEFINITION  - string containing a KEGG module DEFINITION (logical expression using K numbers).
 #'
+#' @param ...  - further arguments (currently unsupported)
+#'
 #' @details
 #' The KEGG module definition uses both spaces and plus signs to indicate \code{'AND'} operations.
 #' However, the \code{'AND'} operation can be used to split the module definition into BLOCKS or to indicate
@@ -16,7 +18,7 @@
 
 ############################################################################################################################################
 
-misc_module_definition_check <- function(DEFINITION){
+misc_module_definition_check <- function(DEFINITION,...){
 
   # DEFINE SUBGROUPING STRUCTURE
   DEFINITION <- gsub(" ,",",",DEFINITION) # CATCH LOOSE " ," (typo in definition catched 20180228)

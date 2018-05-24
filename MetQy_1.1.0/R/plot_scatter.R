@@ -24,6 +24,8 @@
 #'
 #' @param Height    - height for figure file. Default (18in).
 #'
+#' @param ...  - further arguments (currently unsupported)
+#'
 #' @details If \code{colBy} is set to \code{NULL}, no grouping will be done for colouring (a scale warning will be issued that can be safely ignored).
 #'
 #' @return ggplot2 plot object
@@ -45,7 +47,7 @@
 
 ############################################################################################################################################
 
-plot_scatter <- function(plot_data,X = 1, Y = 3,colBy = NULL,xLab = "",yLab = "",xLabs_angle = T,Filename = "plot_scatter.pdf",Width = 24, Height = 18){
+plot_scatter <- function(plot_data,X = 1, Y = 3,colBy = NULL,xLab = "",yLab = "",xLabs_angle = T,Filename = "plot_scatter.pdf",Width = 24, Height = 18,...){
 
   # INPUT
   stopifnot(is.data.frame(plot_data),is.character(xLab),is.character(yLab),is.numeric(X),is.numeric(Y),is.numeric(colBy)||is.null(colBy))

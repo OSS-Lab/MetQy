@@ -36,14 +36,18 @@
 #' data(data_example_moduleIDs)
 #' data(data_example_genomeIDs)
 #'
-#' # Calculate the module completion fraction (mcf) for the genomes and modules contained in the data objects above.
-#' OUT         <- query_genomes_to_modules(data_example_genomeIDs,MODULE_ID = data_example_moduleIDs)
+#' # Calculate the module completion fraction (mcf) for the genomes
+#' #                and modules contained in the data objects above.
+#' OUT         <- query_genomes_to_modules(data_example_genomeIDs,
+#'                                         MODULE_ID = data_example_moduleIDs)
 #'
 #' pca <- prcomp(OUT$MATRIX)
 #'
 #' # Group data
 #' this_FACTOR      <- rep(LETTERS[1:5],length(data_example_genomeIDs)/5)
-#' mean_dist_output <- analysis_pca_mean_distance_grouping(pca$x,this_FACTOR,xLabs_angle = F,Width = 2, Height = 1.5,Filename = "../GitHub/MetQy/fig/plot_pca_scatter.png")
+#' mean_dist_output <- analysis_pca_mean_distance_grouping(pca$x,this_FACTOR,xLabs_angle = F,
+#'                                                         Width = 2, Height = 1.5,
+#'                                                         Filename = "plot_pca_scatter.png")
 #'
 #' @export
 

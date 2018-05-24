@@ -14,6 +14,8 @@
 #' @param use_genome_reference_table - optional. Provide a data frame with updated KEGG genome database.
 #'                                     Default (\code{NULL}; inbuilt data used). See Details.
 #'
+#' @param ...  - further arguments (currently unsupported)
+#'
 #' @details
 #' \code{GENOME} can be a genome identifier (T0 number or a 3 or 4 letter code; e.g. "T00001" or "eco", respectively) OR
 #' a character vector contianing a set of genes (i.e. either EC or K numbers; e.g. "1.1.1.1" or "K00001", respectively).
@@ -34,7 +36,7 @@
 #'
 #' @return Data frame containing the following columns:
 #' \preformatted{
-#'	 BLOCK_DEF     - the KEGG module DEFINITION of each block, 
+#'	 BLOCK_DEF     - the KEGG module DEFINITION of each block,
 #'	                   with missing genes flagged by '*';
 #'	 PRESENT       - binary indicator of the automatic evaluation;
 #'	 MISSING_GENES - list of missing genes.
@@ -46,7 +48,7 @@
 #'
 #' @export
 
-query_missingGenes_from_module  <- function(GENOME,MODULE_ID, PRINT_TO_SCREEN = TRUE,use_genome_reference_table = NULL,use_module_reference_table = NULL){
+query_missingGenes_from_module  <- function(GENOME,MODULE_ID, PRINT_TO_SCREEN = TRUE,use_genome_reference_table = NULL,use_module_reference_table = NULL,...){
 
   # MANAGE INPUT ----
   stopifnot(is.character(GENOME))

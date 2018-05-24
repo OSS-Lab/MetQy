@@ -17,6 +17,8 @@
 #'
 #' @param verbose       - logical. Should progress be printed to the screen? Default (\code{TRUE}).
 #'
+#' @param ...  - further arguments (currently unsupported)
+#'
 #' @return A data frame with the formatted data.See the file-specific functions.
 #'
 #' @seealso \link{parseKEGG_compound},\link{parseKEGG_enzyme},\link{parseKEGG_genome}, \link{parseKEGG_module},
@@ -41,7 +43,7 @@
 ##############################################################################################
 
 
-parseKEGG_file <- function(FILE_PATH,split_pattern = "ENTRY",pathway_trim=T,verbose = T){
+parseKEGG_file <- function(FILE_PATH,split_pattern = "ENTRY",pathway_trim=T,verbose = T,...){
 
   ####  MANAGE INPUT ----
   # CHECKS

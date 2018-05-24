@@ -6,11 +6,13 @@
 #'
 #' @param Min - optional. The value to use as the starting value for the axis. Default (\code{NULL}).
 #'
+#' @param ...  - further arguments (currently unsupported)
+#'
 #' @return List containing the minimum and maximum axis values (\code{$min} and \code{$max}, respectively) and the array that can be used to indicate the axis breaks (\code{$array})
 #'
 #' @export
 
-misc_axisRound <- function(Vector, roundBy = NULL, Min = NULL){
+misc_axisRound <- function(Vector, roundBy = NULL, Min = NULL,...){
 
   # roundBy = NULL; Min = NULL
 

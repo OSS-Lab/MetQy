@@ -2,6 +2,8 @@
 #'
 #' @param MATRIX - matrix with the rows refering to the points with N columns containing the coordinates (and therefore N dimensions).
 #'
+#' @param ...  - further arguments (currently unsupported)
+#'
 #' @details The mean distance of \eqn{p} points is calculated by the sum of the individual Euclidean distances
 #' divided by the total number of distances (given by \eqn{p*(p-1)/2}).
 #'
@@ -11,8 +13,10 @@
 #' data(data_example_moduleIDs)
 #' data(data_example_genomeIDs)
 #'
-#' # Calculate the module completion fraction (mcf) for the genomes and modules contained in the data objects above.
-#' OUT         <- query_genomes_to_modules(data_example_genomeIDs,MODULE_ID = data_example_moduleIDs)
+#' # Calculate the module completion fraction (mcf) for the genomes
+#' #     and modules contained in the data objects above.
+#' OUT         <- query_genomes_to_modules(data_example_genomeIDs,
+#'                                         MODULE_ID = data_example_moduleIDs)
 #'
 #' pca <- prcomp(OUT$MATRIX)
 #'
@@ -23,7 +27,7 @@
 
 ############################################################################################################################################
 
-analysis_pca_mean_distance_calculation <- function(MATRIX){
+analysis_pca_mean_distance_calculation <- function(MATRIX,...){
 
   stopifnot(ncol(MATRIX)>1)
   stopifnot(nrow(MATRIX)>1) # minimum two points

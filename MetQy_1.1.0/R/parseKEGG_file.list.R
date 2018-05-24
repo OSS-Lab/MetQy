@@ -5,6 +5,8 @@
 #'
 #' @param FILE_PATH - string pointing to the location of '.list' file.
 #'
+#' @param ...  - further arguments (currently unsupported)
+#'
 #' @return MATRIX
 #'
 #' @examples
@@ -21,7 +23,7 @@
 # 3.    RETURN MATRIX
 ##############################################################################################
 
-parseKEGG_file.list <- function(FILE_PATH){
+parseKEGG_file.list <- function(FILE_PATH,...){
 
   #### MANAGE INPUT ----
   # CHECK FILE EXISTS

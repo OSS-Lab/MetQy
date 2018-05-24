@@ -10,11 +10,13 @@
 #' @param KO_in_DEF_EC - logical. If enzyme IDs are given, should lingering K numbers in the module DEFINITION
 #'                       be assumed to be present? Default (\code{FALSE}).
 #'
+#' @param ...  - further arguments (currently unsupported)
+#'
 #' @details \code{gene_vector} must contain either K or EC numbers.
 #'
 #' @export
 
-misc_evaluate_block <- function(gene_vector, BLOCK, KO_in_DEF_EC = FALSE){
+misc_evaluate_block <- function(gene_vector, BLOCK, KO_in_DEF_EC = FALSE,...){
 
   EC_KO_data_names <- BLOCK
 

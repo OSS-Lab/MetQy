@@ -18,7 +18,7 @@
 #'
 #' @param shortName_file_path - file path to table containing Module IDs (column 1), Short name (column 2). Default (\code{""})
 #'
-#' @param ...       - other arguments for \code{parseKEGG_file()}
+#' @param ...       - further arguments for \code{parseKEGG_file()}
 #'
 #' @details
 #' DEFINITION: Logical Expression (adapted from \link{http://www.genome.jp/kegg/module.html})

@@ -9,6 +9,8 @@
 #'
 #' @param ORTHOLOGS  - vector listing the K numbers and related EC numbers.
 #'
+#' @param ...  - further arguments (currently unsupported)
+#'
 #' @return A list with the formatted block (\code{$thisBlock}) and any optional K and EC numbers (\code{$thisOptional_KO} and \code{$thisOptional_EC})
 #'
 #' @seealso \link{parseKEGG_module}
@@ -16,7 +18,7 @@
 
 ############################################################################################################################################
 
-misc_module_definition_optional <- function(BLOCK,ORTHOLOGS){
+misc_module_definition_optional <- function(BLOCK,ORTHOLOGS,...){
 
   # EXCLUDE optional KOs (indicated by -K\\d{5})
     thisOptional_KO <- NULL

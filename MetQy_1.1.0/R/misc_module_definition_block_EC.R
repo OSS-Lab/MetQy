@@ -7,6 +7,8 @@
 #'
 #' @param ORTHOLOGS  - vector listing the K numbers and related EC numbers.
 #'
+#' @param ...  - further arguments (currently unsupported)
+#'
 #' @details The KEGG module definition uses optional KEGG orthologs, indicated by a "-". These are removed and the corresponding EC number stored.
 #'
 #' @seealso \link{parseKEGG_module}
@@ -14,7 +16,7 @@
 
 ############################################################################################################################################
 
-misc_module_definition_block_EC <- function(BLOCK,ORTHOLOGS){
+misc_module_definition_block_EC <- function(BLOCK,ORTHOLOGS,...){
 
   BLOCK_EC <-BLOCK
   # REPLACE KOs with EC numbers

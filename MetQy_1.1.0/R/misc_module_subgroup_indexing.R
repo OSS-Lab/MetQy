@@ -3,13 +3,16 @@
 #' This functions helps format the KEGG module DEFINITION by checking all the bracket-delimitted BLOCKS
 #' to then remove flanking brackets (unnecessary).
 #' @param DEFINITION - KEGG module definition
+#'
+#' @param ...  - further arguments (currently unsupported)
+#'
 #' @seealso \link{parseKEGG_module},\link{misc_module_definition_check}
 #'
 #' @export
 
 ############################################################################################################################################
 
-misc_module_subgroup_indexing <- function(DEFINITION){
+misc_module_subgroup_indexing <- function(DEFINITION,...){
 
   all_chars   <- strsplit(DEFINITION,split="+")[[1]] # split all characters (split by regular expression)
   Group_index <- numeric(length(all_chars)+1) # LEAVE ONE POSITION BEFORE

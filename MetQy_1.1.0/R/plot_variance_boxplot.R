@@ -15,6 +15,7 @@
 #'
 #' @param Height    - Height size for file. Default (18in).
 #'
+#' @param ...  - further arguments (currently unsupported)
 #'
 #' @return  ggplot object of plot
 #'
@@ -25,7 +26,7 @@
 
 ############################################################################################################################################
 
-plot_variance_boxplot <- function(MATRIX_IN, x_lab = "Modules", y_lab = "Fraction matched",xLabs_angle = T, Filename ="", Width = 24, Height = 18){
+plot_variance_boxplot <- function(MATRIX_IN, x_lab = "Modules", y_lab = "Fraction matched",xLabs_angle = T, Filename ="", Width = 24, Height = 18,...){
   # GIVE MATRIX AND IT CALCULATES DE VARIATION OF THE ROWS
 
   # MANAGE INPUT ----
