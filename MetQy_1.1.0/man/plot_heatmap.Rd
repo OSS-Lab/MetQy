@@ -6,7 +6,7 @@
 \usage{
 plot_heatmap(data_in, row_lab = "Genomes", col_lab = "Modules",
   ORDER_MATRIX = TRUE, legend_name = "Module\\ncompleteness\\nfraction\\n",
-  set_yLim = FALSE, Filename = "", Width = 24, Height = 18)
+  set_yLim = FALSE, Filename = "", Width = 24, Height = 18, ...)
 }
 \arguments{
 \item{data_in}{- numeric matrix OR 3-column data frame. See \code{Details}.}
@@ -26,6 +26,8 @@ plot_heatmap(data_in, row_lab = "Genomes", col_lab = "Modules",
 \item{Width}{- optional. Width  size for file. Default (24 in).}
 
 \item{Height}{- optional. Height size for file. Default (18 in).}
+
+\item{...}{- further arguments (currently unsupported)}
 }
 \value{
 ggplot object. Saves figures if Filename is specified.
@@ -46,11 +48,13 @@ If numeric, the values given are used for the lower and upper limits respectivel
 data(data_example_moduleIDs)
 data(data_example_genomeIDs)
 
-# Calculate the module completion fraction (mcf) for the genomes and modules contained in the data objects above.
+# Calculate the module completion fraction (mcf) for the genomes
+#      and modules contained in the data objects above.
 OUT         <- query_genomes_to_modules(data_example_genomeIDs,MODULE_ID = data_example_moduleIDs)
 
 # Make a heatmap of the mcf output from query_genomes_to_modules
-#     Rows and columns are reordered according to the dendrogram resulting from hierarchical clustering by default.
+#     Rows and columns are reordered according to the dendrogram resulting from
+#           hierarchical clustering by default.
 p <- plot_heatmap(OUT$MATRIX,Filename = "plot_heatmap.png")
 
 }

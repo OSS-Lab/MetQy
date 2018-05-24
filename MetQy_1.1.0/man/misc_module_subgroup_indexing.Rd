@@ -4,10 +4,12 @@
 \alias{misc_module_subgroup_indexing}
 \title{Subgroup check - formatting KEGG module definition.}
 \usage{
-misc_module_subgroup_indexing(DEFINITION)
+misc_module_subgroup_indexing(DEFINITION, ...)
 }
 \arguments{
 \item{DEFINITION}{- KEGG module definition}
+
+\item{...}{- further arguments (currently unsupported)}
 }
 \description{
 This functions helps format the KEGG module DEFINITION by checking all the bracket-delimitted BLOCKS

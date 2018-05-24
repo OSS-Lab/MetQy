@@ -6,7 +6,7 @@
 \usage{
 plot_scatter(plot_data, X = 1, Y = 3, colBy = NULL, xLab = "",
   yLab = "", xLabs_angle = T, Filename = "plot_scatter.pdf", Width = 24,
-  Height = 18)
+  Height = 18, ...)
 }
 \arguments{
 \item{plot_data}{- data frame. The columns to be plotted are indicated with \code{X} and \code{Y}.Order given is conserved.}
@@ -25,6 +25,8 @@ plot_scatter(plot_data, X = 1, Y = 3, colBy = NULL, xLab = "",
 \item{Width}{- width for figure file. Default (24in).}
 
 \item{Height}{- height for figure file. Default (18in).}
+
+\item{...}{- further arguments (currently unsupported)}
 }
 \value{
 ggplot2 plot object

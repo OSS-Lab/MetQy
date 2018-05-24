@@ -4,12 +4,14 @@
 \alias{misc_module_definition_block_EC}
 \title{KEGG module definition processing: subblocks}
 \usage{
-misc_module_definition_block_EC(BLOCK, ORTHOLOGS)
+misc_module_definition_block_EC(BLOCK, ORTHOLOGS, ...)
 }
 \arguments{
 \item{BLOCK}{- string containing a block of a KEGG module DEFINITION (logical expression using K numbers).}
 
 \item{ORTHOLOGS}{- vector listing the K numbers and related EC numbers.}
+
+\item{...}{- further arguments (currently unsupported)}
 }
 \description{
 Format the KEGG module database - Format the KEGG module DEFINITION for ease of analysis by excluding optional KEGG orthologs.

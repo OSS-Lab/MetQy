@@ -16,7 +16,7 @@ parseKEGG_module(KEGG_path, outDir = "output", verbose = T,
 
 \item{shortName_file_path}{- file path to table containing Module IDs (column 1), Short name (column 2). Default (\code{""})}
 
-\item{...}{- other arguments for \code{parseKEGG_file()}}
+\item{...}{- further arguments for \code{parseKEGG_file()}}
 }
 \value{
 Generates module_reference_table (.txt & .rda; saved to \code{'outDir'}) and returns

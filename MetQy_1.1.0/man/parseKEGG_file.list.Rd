@@ -4,10 +4,12 @@
 \alias{parseKEGG_file.list}
 \title{Parse any '.list' KEGG file}
 \usage{
-parseKEGG_file.list(FILE_PATH)
+parseKEGG_file.list(FILE_PATH, ...)
 }
 \arguments{
 \item{FILE_PATH}{- string pointing to the location of '.list' file.}
+
+\item{...}{- further arguments (currently unsupported)}
 }
 \value{
 MATRIX

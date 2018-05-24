@@ -4,10 +4,12 @@
 \alias{misc_create_labels}
 \title{Creates labels to add to a character vector to make all entries unique}
 \usage{
-misc_create_labels(N)
+misc_create_labels(N, ...)
 }
 \arguments{
 \item{N}{- numeric. Indicates the length of the label vector to be return.}
+
+\item{...}{- further arguments (currently unsupported)}
 }
 \value{
 A character vector of length N with unique set of alpha-numeric labels.

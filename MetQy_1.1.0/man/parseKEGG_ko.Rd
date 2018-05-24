@@ -13,7 +13,7 @@ parseKEGG_ko(KEGG_path, outDir = "output", verbose = T, ...)
 
 \item{verbose}{- logical. Should progress be printed to the screen? Default (\code{TRUE}).}
 
-\item{...}{- other arguments for \code{parseKEGG_file()}.}
+\item{...}{- further arguments for \code{parseKEGG_file()}.}
 }
 \value{
 Generates ko_reference_table (.txt & .rda; saved to \code{'outDir'}) and returns

@@ -4,7 +4,7 @@
 \alias{misc_evaluate_block}
 \title{Evaluate a KEGG module block definition.}
 \usage{
-misc_evaluate_block(gene_vector, BLOCK, KO_in_DEF_EC = FALSE)
+misc_evaluate_block(gene_vector, BLOCK, KO_in_DEF_EC = FALSE, ...)
 }
 \arguments{
 \item{gene_vector}{- vector containing either K or EC numbers. See Details.}
@@ -13,6 +13,8 @@ misc_evaluate_block(gene_vector, BLOCK, KO_in_DEF_EC = FALSE)
 
 \item{KO_in_DEF_EC}{- logical. If enzyme IDs are given, should lingering K numbers in the module DEFINITION
 be assumed to be present? Default (\code{FALSE}).}
+
+\item{...}{- further arguments (currently unsupported)}
 }
 \description{
 Evaluate a KEGG module block definition given a vector of genes (KEGG Orthologs -KOs-, identified with K number).

@@ -18,9 +18,9 @@ parseKEGG_genome(KEGG_path, outDir = "output", addKOs = T, addECs = T,
 
 \item{includeViruses}{- logical. Should viral genomes be included? Default (\code{FALSE}).}
 
-\item{verbose}{- logical. Should progress be printed to the screen? Default (\code{TRUE}).
+\item{verbose}{- logical. Should progress be printed to the screen? Default (\code{TRUE}).}
 
- @param ...       - other arguments for \code{parseKEGG_file()}.}
+\item{...}{- further arguments for \code{parseKEGG_file()}.}
 }
 \value{
 Generates genome_reference_table (.txt & .rda; saved to \code{'outDir'}) and returns

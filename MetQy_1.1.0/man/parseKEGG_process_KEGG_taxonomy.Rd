@@ -5,7 +5,7 @@
 \title{Retrieve the taxonomy listed as part of the KEGG genome database.}
 \usage{
 parseKEGG_process_KEGG_taxonomy(genome_reference_table,
-  taxonomy_header = "TAXONOMY", org_header = 1)
+  taxonomy_header = "TAXONOMY", org_header = 1, ...)
 }
 \arguments{
 \item{genome_reference_table}{- table containing the different genome entries (rows) and data (columns). See \link{parseKEGG_genome}.}
@@ -13,6 +13,8 @@ parseKEGG_process_KEGG_taxonomy(genome_reference_table,
 \item{taxonomy_header}{- optional. Character with header name or number indicating column index for taxonomic information. Default ("TAXONOMY").}
 
 \item{org_header}{- optional. Character with header name or number indicating column index for organism name or ID. Use to name the output rownames. Default (1; first column).}
+
+\item{...}{- further arguments (currently unsupported)}
 }
 \value{
 Data frame with 6 columns containing the taxonomic information (columns: KINGDOM, PHYLUM, CLASS, ORDER, FAMILY, GENUS).
@@ -35,14 +37,9 @@ genome_reference_table <- parseKEGG_genome("~/KEGG")
 
 # Extract taxonomic information from genome_referene_table
 TAXONOMY_table <- parseKEGG_process_KEGG_taxonomy(genome_reference_table)
-head(TAXONOMY_table)
-#          KINGDOM         PHYLUM               CLASS            ORDER                FAMILY              GENUS
-# T00001  Bacteria Proteobacteria Gammaproteobacteria   Pasteurellales       Pasteurellaceae        Haemophilus
-# T00002  Bacteria    Tenericutes          Mollicutes Mycoplasmataceae            Mycoplasma            UNKNOWN
-# T00003   Archaea  Euryarchaeota        Methanococci  Methanococcales Methanocaldococcaceae Methanocaldococcus
-# T00004  Bacteria  Cyanobacteria     Synechococcales Merismopediaceae         Synechocystis            UNKNOWN
-# T00005 Eukaryota          Fungi             Dikarya       Ascomycota      Saccharomycotina    Saccharomycetes
-# T00006  Bacteria    Tenericutes          Mollicutes Mycoplasmataceae            Mycoplasma            UNKNOWN
+TAXONOMY_table[1,]
+#            KINGDOM    PHYLUM             CLASS                  ORDER             FAMILY             GENUS
+# T00001     Bacteria    Proteobacteria    Gammaproteobacteria    Pasteurellales    Pasteurellaceae    Haemophilus
 
 }
 \seealso{

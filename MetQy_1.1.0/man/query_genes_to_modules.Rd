@@ -5,7 +5,7 @@
 \title{Given a set of genes, find the modules they are involved in.}
 \usage{
 query_genes_to_modules(genes, use_module_reference_table = NULL,
-  use_ko_reference_table = NULL, use_enzyme_reference_table = NULL)
+  use_ko_reference_table = NULL, use_enzyme_reference_table = NULL, ...)
 }
 \arguments{
 \item{genes}{- character vector (length 1). K or EC number.}
@@ -18,6 +18,8 @@ Default (\code{NULL}; inbuilt data used). See Details.}
 
 \item{use_enzyme_reference_table}{- optional. Provide a data frame with updated KEGG enzyme database.
 Default (\code{NULL}; inbuilt data used). See Details.}
+
+\item{...}{- further arguments (currently unsupported)}
 }
 \value{
 Data frame containing a binary indicator for \code{genes} (rows, specified by rownames) involved in modules (columns, Module IDs specified in names).

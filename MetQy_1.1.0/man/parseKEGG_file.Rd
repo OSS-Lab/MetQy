@@ -5,7 +5,7 @@
 \title{Parse any KEGG file without extension}
 \usage{
 parseKEGG_file(FILE_PATH, split_pattern = "ENTRY", pathway_trim = T,
-  verbose = T)
+  verbose = T, ...)
 }
 \arguments{
 \item{split_pattern}{- string to use to identify start of new section/entry. Default ("ENTRY").}
@@ -14,6 +14,8 @@ parseKEGG_file(FILE_PATH, split_pattern = "ENTRY", pathway_trim = T,
 Default (\code{TRUE}).}
 
 \item{verbose}{- logical. Should progress be printed to the screen? Default (\code{TRUE}).}
+
+\item{...}{- further arguments (currently unsupported)}
 
 \item{FILE}{- string pointing to the location of the file WITHOUT EXTENSION (uncompressed).}
 }

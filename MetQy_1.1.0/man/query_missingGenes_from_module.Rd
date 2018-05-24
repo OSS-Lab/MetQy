@@ -5,7 +5,7 @@
 \title{Identify missing genes from a KEGG module given a set of genes.}
 \usage{
 query_missingGenes_from_module(GENOME, MODULE_ID, PRINT_TO_SCREEN = TRUE,
-  use_genome_reference_table = NULL, use_module_reference_table = NULL)
+  use_genome_reference_table = NULL, use_module_reference_table = NULL, ...)
 }
 \arguments{
 \item{GENOME}{- character vector containing a single genome identifier or set of genes or enzymes that define a [meta]genome. See Details.}
@@ -19,11 +19,13 @@ Default (\code{NULL}; inbuilt data used). See Details.}
 
 \item{use_module_reference_table}{- optional. Provide a data frame with updated KEGG module database OR with custom-made modules.
 Default (\code{NULL}; inbuilt data used). See Details.}
+
+\item{...}{- further arguments (currently unsupported)}
 }
 \value{
 Data frame containing the following columns:
 \preformatted{
- BLOCK_DEF     - the KEGG module DEFINITION of each block, 
+ BLOCK_DEF     - the KEGG module DEFINITION of each block,
                    with missing genes flagged by '*';
  PRESENT       - binary indicator of the automatic evaluation;
  MISSING_GENES - list of missing genes.

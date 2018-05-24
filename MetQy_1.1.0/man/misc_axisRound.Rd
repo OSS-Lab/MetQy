@@ -4,7 +4,7 @@
 \alias{misc_axisRound}
 \title{Find best value to round axis to.}
 \usage{
-misc_axisRound(Vector, roundBy = NULL, Min = NULL)
+misc_axisRound(Vector, roundBy = NULL, Min = NULL, ...)
 }
 \arguments{
 \item{Vector}{- values that are being plotted.}
@@ -12,6 +12,8 @@ misc_axisRound(Vector, roundBy = NULL, Min = NULL)
 \item{roundBy}{- optional. The value to use for rounding. Default (\code{NULL}).}
 
 \item{Min}{- optional. The value to use as the starting value for the axis. Default (\code{NULL}).}
+
+\item{...}{- further arguments (currently unsupported)}
 }
 \value{
 List containing the minimum and maximum axis values (\code{$min} and \code{$max}, respectively) and the array that can be used to indicate the axis breaks (\code{$array})

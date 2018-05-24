@@ -9,7 +9,7 @@ parseKEGG_execute_all(KEGG_path, ...)
 \arguments{
 \item{KEGG_path}{- string pointing to the location of the KEGG database parent folder.}
 
-\item{...}{- other arguments, such as \code{outDir}, for \link{parseKEGG_file},
+\item{...}{- further arguments, such as \code{outDir}, for \link{parseKEGG_file},
 \link{parseKEGG_file.list} and database-specific functions (below).}
 }
 \description{
@@ -18,7 +18,8 @@ Execute all parseKEGG parent functions to format specific KEGG databases into da
 \examples{
 KEGG_path <- "~/KEGG" # MODIFY!
 parseKEGG_parseKEGG_execute_all(KEGG_path)
-# multiple reference_table objects in workspace and .txt files written to output/ (relative to current working directory)
+# multiple reference_table objects in workspace and .txt files written to
+#    output/ (relative to current working directory)
 
 }
 \seealso{

@@ -6,7 +6,7 @@
 \usage{
 plot_scatter_byFactors(MATRIX, FACTOR, factor_labs = NULL, xLab = NULL,
   yLab = NULL, Filename = "plot_scatter_byFactors.pdf", Width = 7,
-  Height = 5)
+  Height = 5, ...)
 }
 \arguments{
 \item{MATRIX}{- two column matrix to plot. Only the first two columns will be used.}
@@ -21,6 +21,8 @@ Default ("plot_scatter_byFactors.pdf"). If set to \code{""}, no file will be wri
 \item{Width}{- Width size for file. Default (7 in).}
 
 \item{Height}{- Height size for file. Default (5 in).}
+
+\item{...}{- further arguments (currently unsupported)}
 }
 \value{
 A list with as many entires as factors is generated (one for each factor) using \code{factor_labs} for the names.
@@ -54,18 +56,24 @@ data(data_example_moduleIDs)
 data(data_example_genomeIDs)
 # length(data_example_genomeIDs) # [1] 25
 
-# Calculate the module completion fraction (mcf) for the genomes and modules contained in the data objects above.
-OUT         <- query_genomes_to_modules(data_example_genomeIDs,MODULE_ID = data_example_moduleIDs)
+# Calculate the module completion fraction (mcf) for the genomes
+#       and modules contained in the data objects above.
+OUT         <- query_genomes_to_modules(data_example_genomeIDs,
+                                        MODULE_ID = data_example_moduleIDs)
 
 pca <- prcomp(OUT$MATRIX)
 
 # Make boxplots of the mcf output from query_genomes_to_modules
 this_FACTOR <- rep(LETTERS[1:5],length(data_example_genomeIDs)/5)
-plot_output <- plot_scatter_byFactors(pca$x[,1:2],FACTOR = this_FACTOR,factor_labs = "random",Filename = "plot_scatter_byFactors.png")
+plot_output <- plot_scatter_byFactors(pca$x[,1:2],FACTOR = this_FACTOR,
+                                      factor_labs = "random",
+                                      Filename = "plot_scatter_byFactors.png")
 
 # NAs are ommitted, so a single group can be contrasted with overall data
 this_FACTOR <- c(rep(NA,20),rep(LETTERS[1],5))
-plot_output <- plot_scatter_byFactors(pca$x[,1:2],FACTOR = this_FACTOR,factor_labs = "group_A",Filename = "plot_scatter_byFactors_single.png")
+plot_output <- plot_scatter_byFactors(pca$x[,1:2],FACTOR = this_FACTOR,
+                                      factor_labs = "group_A",
+                                      Filename = "plot_scatter_byFactors_single.png")
 
 }
 \seealso{

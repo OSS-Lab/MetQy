@@ -8,7 +8,7 @@ plot_sunburst(DATA, centerLabel = "", ANGLE = FALSE, fill_by = NULL,
   fill_by_mean = FALSE, outer_text = TRUE,
   outer_text_levelN_minus_1 = TRUE, legend_name = "Counts\\n",
   sunburst = TRUE, setMax = NULL, setMin = NULL, textSize = NULL,
-  textColour = "black", Filename = "", WIDTH = 25, HEIGHT = 25)
+  textColour = "black", Filename = "", WIDTH = 25, HEIGHT = 25, ...)
 }
 \arguments{
 \item{DATA}{- Data frame containing hierarchical data by columns, where the left column is the highest level and the right column the lowest one.}
@@ -96,24 +96,30 @@ Function developed by expanding and modifying Yahia El Gamal's blog post "Create
 \examples{
 data(data_example_sunburst)
 
-#  CLASS_I         CLASS_II                            CLASS_III               NAME_SHORT
-#	Pathway module  Carbohydrate and lipid metabolism		Fatty acid metabolism		                                       beta-Oxidation
-#	Pathway module		              Energy metabolism		   Methane metabolism		                        Methanogenesis, from methanol
-#	Pathway module		              Energy metabolism		   Methane metabolism		                         Methanogenesis, from acetate
-#	Pathway module		              Energy metabolism		      Carbon fixation		Reductive acetyl-CoA pathway (Wood-Ljungdahl pathway)
-#	Pathway module		              Energy metabolism		  Nitrogen metabolism		                      Dissimilatory nitrate reduction
-#	Pathway module		              Energy metabolism		   Methane metabolism		                     Methanogenesis, from methylamine
-#	Pathway module		              Energy metabolism		   Methane metabolism		                             Methanogenesis, from CO2
-#	Pathway module		              Energy metabolism		    Sulfur metabolism		                      Dissimilatory sulfate reduction
+#  CLASS_I            CLASS_II            CLASS_III            NAME_SHORT
+#	Pathway module    Carbohydrate & lipid metabolism    Fatty acid metabolism    beta-Oxidation
+#	Pathway module        Energy metabolism    Methane metabolism    Methanogenesis, from methanol
+#	Pathway module        Energy metabolism    Methane metabolism    Methanogenesis, from acetate
+#	Pathway module        Energy metabolism    Carbon fixation        Reductive acetyl-CoA pathway
+#	Pathway module        Energy metabolism    Nitrogen metabolism    Dissimilatory nitrate reduction
+#	Pathway module        Energy metabolism    Methane metabolism    Methanogenesis, from methylamine
+#	Pathway module        Energy metabolism    Methane metabolism    Methanogenesis, from CO2
+#	Pathway module        Energy metabolism    Sulfur metabolism    Dissimilatory sulfate reduction
 
 # Simplest plot using count data.
 plot_data <- plot_sunburst(sunbust_data,WIDTH = 8) # WIDTH scales text size
 
 # Specify values to be used for outer ring (lowest level) and change legend name accordingly
-data(data_example_sunburst_fill_by) # Contains the mcf for the modules associated with the data shown above for an example dataset.
-plot_data <- plot_sunburst(data_example_sunburst,centerLabel = "Org A",fill_by = data_example_sunburst_fill_by,outer_text = F,WIDTH = 8,legend_name = "fill_by")
+
+data(data_example_sunburst_fill_by)
+        # mcf for the modules associated with the data shown above for an example dataset.
+plot_data <- plot_sunburst(data_example_sunburst,centerLabel = "Org A",
+                           fill_by = data_example_sunburst_fill_by,outer_text = F,WIDTH = 8,
+                           legend_name = "fill_by")
 
 # Also fill inner rings (levels) according to the mean values determined by fill_by.
-plot_data <- plot_sunburst(data_example_sunburst,centerLabel = "Org A",fill_by = data_example_sunburst_fill_by,fill_by_mean = T,outer_text = F,WIDTH = 8,legend_name = "fill_by")
+plot_data <- plot_sunburst(data_example_sunburst,centerLabel = "Org A",
+                           fill_by = data_example_sunburst_fill_by,fill_by_mean = T,
+                           outer_text = F,WIDTH = 8,legend_name = "fill_by")
 
 }

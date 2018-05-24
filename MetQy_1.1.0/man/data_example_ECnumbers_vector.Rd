@@ -17,7 +17,7 @@ data_example_ECnumbers_vector
 \description{
 A dataset containing an example of a vector containing Enzyme Commission (EC) numbers
 that can be used with the function \code{misc_geneVector_module()}
-or by the function \code{query_genomes_to_modules()} after formatting it into a data frame (see function description).
+or by the \code{query_genomes_to_modules()} function after formatting it into a data frame (see function description).
 }
 \details{
 When generating an EC number vector, make sure that all entries have the 4 nomenclature positions

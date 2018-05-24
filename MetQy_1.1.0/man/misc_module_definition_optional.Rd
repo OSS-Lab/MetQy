@@ -4,12 +4,14 @@
 \alias{misc_module_definition_optional}
 \title{KEGG module definition processing: optional KEGG ortholog exclusion}
 \usage{
-misc_module_definition_optional(BLOCK, ORTHOLOGS)
+misc_module_definition_optional(BLOCK, ORTHOLOGS, ...)
 }
 \arguments{
 \item{BLOCK}{- string containing a block of a KEGG module DEFINITION (logical expression using K numbers).}
 
 \item{ORTHOLOGS}{- vector listing the K numbers and related EC numbers.}
+
+\item{...}{- further arguments (currently unsupported)}
 }
 \value{
 A list with the formatted block (\code{$thisBlock}) and any optional K and EC numbers (\code{$thisOptional_KO} and \code{$thisOptional_EC})

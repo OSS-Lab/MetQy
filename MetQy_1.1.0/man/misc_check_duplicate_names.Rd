@@ -4,10 +4,12 @@
 \alias{misc_check_duplicate_names}
 \title{Check for duplicated strings and append letter code to distinguish them.}
 \usage{
-misc_check_duplicate_names(NAME_VECTOR)
+misc_check_duplicate_names(NAME_VECTOR, ...)
 }
 \arguments{
 \item{NAME_VECTOR}{- character vector.}
+
+\item{...}{- further arguments (currently unsupported)}
 }
 \description{
 Check for duplicated strings and append letter code to distinguish them.

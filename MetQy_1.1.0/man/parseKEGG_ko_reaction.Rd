@@ -4,7 +4,7 @@
 \alias{parseKEGG_ko_reaction}
 \title{Map KEGG orthologs (KOs) to Reaction IDs}
 \usage{
-parseKEGG_ko_reaction(KEGG_path, outDir = "output", verbose = T)
+parseKEGG_ko_reaction(KEGG_path, outDir = "output", verbose = T, ...)
 }
 \arguments{
 \item{KEGG_path}{- string pointing to the location of the KEGG database parent folder. The path to the required file is contained within the function.}
@@ -12,6 +12,8 @@ parseKEGG_ko_reaction(KEGG_path, outDir = "output", verbose = T)
 \item{outDir}{- string pointing to the output folder. Default ("output/").}
 
 \item{verbose}{- logical. Should progress be printed to the screen? Default (\code{TRUE}).}
+
+\item{...}{- further arguments for \code{parseKEGG_file.list()}.}
 }
 \value{
 Data frame establishing the relationship between KO numbers and reactions (R number) (binary).

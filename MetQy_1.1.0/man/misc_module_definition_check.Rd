@@ -4,10 +4,12 @@
 \alias{misc_module_definition_check}
 \title{KEGG module definition processing: block formatting.}
 \usage{
-misc_module_definition_check(DEFINITION)
+misc_module_definition_check(DEFINITION, ...)
 }
 \arguments{
 \item{DEFINITION}{- string containing a KEGG module DEFINITION (logical expression using K numbers).}
+
+\item{...}{- further arguments (currently unsupported)}
 }
 \description{
 Format the KEGG module DEFINITION for ease of analysis.

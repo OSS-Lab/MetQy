@@ -5,7 +5,7 @@
 \title{Find the genome(s) that contain a set of genes.}
 \usage{
 query_genes_to_genomes(genes, use_genome_reference_table = NULL,
-  use_ko_reference_table = NULL, use_enzyme_reference_table = NULL)
+  use_ko_reference_table = NULL, use_enzyme_reference_table = NULL, ...)
 }
 \arguments{
 \item{genes}{- character vector of KO or EC numbers. See Details for more info on the use of ECs.}
@@ -18,6 +18,8 @@ Default (\code{NULL}; inbuilt data used). See Details.}
 
 \item{use_enzyme_reference_table}{- optional. Provide a data frame with updated KEGG enzyme database.
 Default (\code{NULL}; inbuilt data used). See Details.}
+
+\item{...}{- further arguments (currently unsupported)}
 }
 \value{
 Data frame containing the \code{genes} (rows, specified in the rownames) and

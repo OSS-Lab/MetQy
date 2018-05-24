@@ -6,7 +6,7 @@
 \format{\code{use_matrix_dataframe}  rows - genome identifiers, columns - module IDs.}
 \usage{
 query_modules_to_genomes(MODULE_ID, threshold = 1,
-  use_matrix_dataframe = NULL, use_module_reference_table = NULL)
+  use_matrix_dataframe = NULL, use_module_reference_table = NULL, ...)
 }
 \arguments{
 \item{MODULE_ID}{- KEGG module identifier (M number, e.g. "M00001").}
@@ -18,6 +18,8 @@ Default (\code{NULL}; inbuilt data used). See Details.}
 
 \item{use_module_reference_table}{- optional. Provide a data frame with updated KEGG module database OR with custom-made modules.
 Default (\code{NULL}; inbuilt data used). See Details.}
+
+\item{...}{- further arguments (currently unsupported)}
 }
 \value{
 If a single \code{MODULE_ID} is provided, a vector which contains the mfc with the

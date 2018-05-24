@@ -6,7 +6,7 @@
 \usage{
 plot_variance_boxplot(MATRIX_IN, x_lab = "Modules",
   y_lab = "Fraction matched", xLabs_angle = T, Filename = "",
-  Width = 24, Height = 18)
+  Width = 24, Height = 18, ...)
 }
 \arguments{
 \item{MATRIX_IN}{- numeric matrix containing the module fraction match of the genomes (rows) and modules (columns).
@@ -23,6 +23,8 @@ The columns are used as factor for the box plot grouping.}
 \item{Width}{- Width size for file. Default (24in).}
 
 \item{Height}{- Height size for file. Default (18in).}
+
+\item{...}{- further arguments (currently unsupported)}
 }
 \value{
 ggplot object of plot

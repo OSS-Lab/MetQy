@@ -18,13 +18,13 @@ This function helps visualize hierarchical information by making concentric
 # Load data
 data("data_example_sunburst")
 head(data_example_sunburst)
-#           CLASS_I                          CLASS_II             CLASS_III                                            NAME_SHORT
-# 1 Pathway module Carbohydrate and lipid metabolism Fatty acid metabolism                                        beta-Oxidation
-# 2 Pathway module                 Energy metabolism    Methane metabolism                         Methanogenesis, from methanol
-# 3 Pathway module                 Energy metabolism    Methane metabolism                          Methanogenesis, from acetate
-# 4 Pathway module                 Energy metabolism       Carbon fixation Reductive acetyl-CoA pathway (Wood-Ljungdahl pathway)
-# 5 Pathway module                 Energy metabolism   Nitrogen metabolism                       Dissimilatory nitrate reduction
-# 6 Pathway module                 Energy metabolism    Methane metabolism                      Methanogenesis, from methylamine
+#        CLASS_I    CLASS_II    CLASS_III    NAME_SHORT
+# 1 Pathway module Carbohydrate \\& lipid metabolism Fatty acid metabolism    beta-Oxidation
+# 2 Pathway module    Energy metabolism    Methane metabolism    Methanogenesis, from methanol
+# 3 Pathway module    Energy metabolism    Methane metabolism    Methanogenesis, from acetate
+# 4 Pathway module    Energy metabolism    Carbon fixation    Reductive acetyl-CoA pathway
+# 5 Pathway module    Energy metabolism    Nitrogen metabolism    Dissimilatory nitrate reduction
+# 6 Pathway module    Energy metabolism    Methane metabolism    Methanogenesis, from methylamine
 
 }
 \seealso{
