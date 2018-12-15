@@ -77,6 +77,9 @@
 #' \code{$MATRIX} - matrix of the datasets (rows) and the modules searched (columns) containing the fraction completeness.
 #'
 #' \code{$QUERIES} - data frame listing the SEARCH_TERMS and ARGUMENTS used.
+#' 
+#' \code{$GENOME_INFO_DATA} - data frame containing the genome information provided. If genome identifier(s) or organism name(s) were provided, 
+#'                             \code{$GENOME_INFO_DATA} will contain a \code{TAXONOMY} column. 
 #'
 #' \code{$METADATA} - data frame containing the metadata from the modules analysed (if \code{META_OUT == TRUE}).\preformatted{
 #'  Columns:
@@ -192,8 +195,10 @@ query_genomes_to_modules <- function(GENOME_INFO,splitBy = "[;]",GENOME_ID_COL =
       GENOME_INFO_DATA <- cbind(GENOME_REFERENCE_TABLE$ID[ref_index],
                                 GENOME_REFERENCE_TABLE$ORG_ID[ref_index],
                                 GENOME_REFERENCE_TABLE$ORGANISM[ref_index],
-                                GENOME_REFERENCE_TABLE$KOs[ref_index])
-      colnames(GENOME_INFO_DATA) <- c("ID","ORG_ID","ORGANISM","KOs")
+                                GENOME_REFERENCE_TABLE$KOs[ref_index],
+                                GENOME_REFERENCE_TABLE$TAXONOMY[ref_index]
+                                )
+      colnames(GENOME_INFO_DATA) <- c("ID","ORG_ID","ORGANISM","KOs","TAXONOMY")
 
       genes_col <- 4
       splitBy   <- "[;]"
