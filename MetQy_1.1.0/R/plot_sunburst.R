@@ -12,12 +12,16 @@
 #' @param centerLabel                - optional. String to be used for centre label. Default (\code{""}; i.e. no text).
 #'
 #' @param ANGLE                      - optional. Should the angle of the text be adjusted to the position where it's at? Default (\code{FALSE}; i.e. horizontal text).
+#' 
+#' @param ANGLE_FIRST                - optional. Should the angle of the first level be different from 0? Default (\code{TRUE}).
 #'
 #' @param fill_by                    - optional. Numeric vector containing values to be used to fill outer most ring (see Details). Default (\code{NULL}).
 #'
 #' @param fill_by_mean               - optional. Should the categories in the inner rings be filled (colored) by the mean of the fill_by value provided. Default (\code{FALSE}).
 #'
 #' @param outer_text                 - optional. Should the text from the lowest level (right column) be included? Default (\code{TRUE}).
+#' 
+#' @param outer_text_OFFSET          - optional. Should the text of the last level be offset to outer level? Default (\code{TRUE}).
 #'
 #' @param outer_text_levelN_minus_1  - optional. Should the text from the second lowest level (second column from right) be included? Default (\code{TRUE}).
 #'
@@ -112,8 +116,8 @@
 #' @export
 
 ###
-plot_sunburst <- function(DATA,centerLabel = "",ANGLE = FALSE,fill_by = NULL,fill_by_mean = FALSE,outer_text = TRUE,outer_text_levelN_minus_1 = TRUE,
-                          legend_name = "Counts\n",sunburst=TRUE,setMax = NULL,setMin = NULL,textSize = NULL,textColour = "black",
+plot_sunburst <- function(DATA,centerLabel = "",ANGLE = FALSE,ANGLE_FIRST = TRUE, fill_by = NULL,fill_by_mean = FALSE,outer_text = TRUE,outer_text_levelN_minus_1 = TRUE,
+                          outer_text_OFFSET = TRUE,legend_name = "Counts\n",sunburst=TRUE,setMax = NULL,setMin = NULL,textSize = NULL,textColour = "black",
                           Filename = "",WIDTH = 25,HEIGHT = 25,...){
 
   ##### MANAGE INPUT ----
@@ -207,7 +211,11 @@ plot_sunburst <- function(DATA,centerLabel = "",ANGLE = FALSE,fill_by = NULL,fil
       tmp_2$group_by    <- 1:nrow(tmp_2)
 
       if(N==nLevels){       # &&outer_text
-        tmp_2$labels_x  <- as.numeric(tmp_2$Level)+1
+        if(outer_text_OFFSET){
+          tmp_2$labels_x  <- as.numeric(tmp_2$Level)+1
+        }else{
+          tmp_2$labels_x  <- as.numeric(tmp_2$Level)
+        }
       }else{
         tmp_2$labels_x  <- tmp_2$Level
       }
@@ -251,7 +259,8 @@ plot_sunburst <- function(DATA,centerLabel = "",ANGLE = FALSE,fill_by = NULL,fil
 
   LEVELS$angle  <- 0
   if(sunburst) if(ANGLE) for(i in 1:nrow(LEVELS)) LEVELS$angle[i]     <- compute_angle((LEVELS$cum_counts[i] - LEVELS$counts[i]/2) / nrow(DATA))
-
+  if(!ANGLE_FIRST) LEVELS$angle[which(LEVELS$Level==1)] <- 0
+  
   ### REMAINING LEVELS - PLOT ----
     # use stacked bar chart and then rotate them around the y axis to build to donughts. So let’s do a stacked bar charts
   p <- ggplot2::ggplot(LEVELS, ggplot2::aes(x=Level, y=counts, fill=fillBy)) +
