@@ -7,9 +7,9 @@ MetQy is a R package to ease interfacing with the Kyoto Encyclopedia of Genes an
 Please cite:
 ```
     Andrea Martinez-Vernon, Fred Farrell, Orkun Soyer. MetQy - an R package to query metabolic functions of genes and genomes. 
-        bioRxiv - https://www.biorxiv.org/content/early/2017/11/16/215525
+        Bioinformatics, Volume 34, Issue 23, 01 December 2018, Pages 4134–4137, https://doi.org/10.1093/bioinformatics/bty447   
 ```
-https://www.biorxiv.org/content/early/2017/11/16/215525
+https://doi.org/10.1093/bioinformatics/bty447  
 
 #### Commercial use
 MetQy is a free software for academic purposes. If interested in commercial  use, please read the [LICENCE](https://github.com/OSS-Lab/MetQy/blob/master/LICENCE) and contact [Warwick Ventures](mailto:ventures@warwick.ac.uk)
