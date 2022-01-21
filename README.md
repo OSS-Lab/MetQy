@@ -25,7 +25,7 @@ There are three ways of installing the package:
     > devtools::install_github('OSS-Lab/MetQy',subdir = 'MetQy_1.1.0',dependencies = TRUE) # 
     ```
     
-2. Download 'MetQy_1.1.0.tar.gz' and run the following commands within the R environment:
+2. Download the "MetQy_1.1.0" folder and create a 'MetQy_1.1.0.tar.gz' file. Then run the following commands within the R environment:
     ```
     # Manually install dependent packages - remove any that is already installed. Installing will replace local library.
     > install.packages(c("dplyr","ggplot2","gsubfn","reshape2","xtable"))
